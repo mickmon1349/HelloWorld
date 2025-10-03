@@ -1,14 +1,17 @@
 {
   "name": "helloworld",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Express Hello World application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
@@ -16,6 +19,6 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^4.18.2"
   }
 }
