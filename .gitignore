@@ -1,0 +1,15 @@
+node_modules
+try*.js
+*.png
+z*.js
+*.json
+*.xlsx
+*.docx
+*.csv
+*.tiff
+!.vscode/
+!keybindings.json
+!launch.json
+!settings.json
+!package.json
+!package-lock.json
