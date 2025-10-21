@@ -11,13 +11,11 @@ pipeline {
 
   stages {
     stage('Checkout') {
-            steps {
-                checkout([$class: 'GitSCM',
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/mickmon1349/HelloWorld.git']]
-                ])
+            stage('Checkout') {
+                steps {
+                        git branch: 'main', url: 'https://github.com/mickmon1349/HelloWorld.git'
             }
-        }
+      }
     stage('Test') {
       steps {
         echo 'Running tests...'
