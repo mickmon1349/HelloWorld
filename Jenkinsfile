@@ -11,12 +11,11 @@ pipeline {
 
   stages {
     stage('Checkout') {
-            stage('Checkout') {
-                steps {
-                        git branch: 'main', url: 'https://github.com/mickmon1349/HelloWorld.git'
-            }
+      steps {
+        git branch: 'main', url: 'https://github.com/mickmon1349/HelloWorld.git'
       }
     }
+
     stage('Test') {
       steps {
         echo 'Running tests...'
@@ -44,12 +43,14 @@ pipeline {
       steps {
         withCredentials([file(credentialsId: 'gcp_artifact_key', variable: 'GCP_KEY')]) {
           sh 'gcloud auth activate-service-account --key-file=${GCP_KEY}'
-          sh 'gcloud run deploy ${IMAGE_NAME} \
-                --image ${IMAGE_PATH}:latest \
-                --region ${REGION} \
-                --platform managed \
-                --allow-unauthenticated \
-                --project ${PROJECT_ID}'
+          sh '''
+            gcloud run deploy ${IMAGE_NAME} \
+              --image ${IMAGE_PATH}:latest \
+              --region ${REGION} \
+              --platform managed \
+              --allow-unauthenticated \
+              --project ${PROJECT_ID}
+          '''
         }
       }
     }
