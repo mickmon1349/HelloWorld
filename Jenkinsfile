@@ -16,6 +16,7 @@ pipeline {
                         git branch: 'main', url: 'https://github.com/mickmon1349/HelloWorld.git'
             }
       }
+    }
     stage('Test') {
       steps {
         echo 'Running tests...'
@@ -53,5 +54,4 @@ pipeline {
       }
     }
   }
-}
 }
