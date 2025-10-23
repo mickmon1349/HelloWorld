@@ -5,7 +5,7 @@ pipeline {
     PROJECT_ID = 'callme-op-419108'
     REPO_NAME = 'mickmon-repo'
     REGION = 'asia-east1'
-    IMAGE_NAME = 'hello_world_jenkins'
+    IMAGE_NAME = 'helloworld-jenkins'
     IMAGE_PATH = "${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPO_NAME}/${IMAGE_NAME}"
   }
 
