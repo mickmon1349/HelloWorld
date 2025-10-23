@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World in ShangChung');
+  res.send('Hello World in Taiwan');
 });
 
 app.get('/api/info', (req, res) => {
